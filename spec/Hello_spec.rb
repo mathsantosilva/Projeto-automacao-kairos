@@ -5,5 +5,6 @@ describe "Meu primeiro Script" do
         titulo = (page.title)
         sleep = 5
         expect(titulo).to eql "kairos"
+        puts titulo
     end
 end
