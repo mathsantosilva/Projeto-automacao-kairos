@@ -15,7 +15,7 @@ describe 'Botões de radio', :radio do
         find('input[id="Descricao"]').set 'MiniPrint'
         find('input[id="DadosEmpregador_CampoLinha1"]').set 'Razão Social Teste'
         find('input[id="DadosEmpregador_CampoLinha1Endereco"]').set 'Endereço de teste'
-        drop = find("input[type=button][value='Salvar']", match: :first)
+        drop = find('input[type="submit"][value="Salvar"]', match: :first)
         drop.click
         # salvar a configuração apertando enter 
         # tecla.each do |t|
