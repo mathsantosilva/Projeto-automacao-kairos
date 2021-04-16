@@ -10,7 +10,7 @@ describe 'Movendo relogio monitorado', :drop do
         
 end
 
-    it 'Relogio', :drop_relogio do
+    it '4 posições', :drop_relogio do
         #Primeira posição
         coluna =  find('div[id="column_0"]')
         relogio = find('div[id="widget_1"]')
