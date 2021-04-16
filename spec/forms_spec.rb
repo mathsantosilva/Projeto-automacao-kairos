@@ -1,4 +1,4 @@
-describe 'Acessando o Kairos', :Teste1 do
+describe 'Acessando o Kairos', :forms do
     it 'realizando login com sucesso' do
         visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
         fill_in 'LogOnModel_UserName', with: 'mat_santos21@hotmail.com'
