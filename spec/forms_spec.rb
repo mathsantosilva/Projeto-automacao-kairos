@@ -1,8 +1,8 @@
 describe 'Acessando o Kairos', :forms do
     it 'realizando login com sucesso' do
         visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
-        fill_in 'LogOnModel_UserName', with: 'mat_santos21@hotmail.com'
-        fill_in 'LogOnModel_Password', with: 'teste'
+        fill_in 'LogOnModel_UserName', with: login
+        fill_in 'LogOnModel_Password', with: senha
         click_button 'btnFormLogin'
 
         expect(find('div.TabMenuWrapper').visible?).to be true

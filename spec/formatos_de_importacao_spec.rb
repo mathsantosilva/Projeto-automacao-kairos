@@ -1,8 +1,8 @@
 describe 'Cadastro de formato de arquivo', :formatos do
     before(:each) do
         visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
-        fill_in 'LogOnModel_UserName', with: 'teste1245@dimep.com.br'
-        fill_in 'LogOnModel_Password', with: '1'
+        fill_in 'LogOnModel_UserName', with: login
+        fill_in 'LogOnModel_Password', with: senha
         click_button 'btnFormLogin'
         visit 'https://www.dimepkairos.com.br/Dimep/FormatosArquivoColetaApontamentos'
         sleep 5

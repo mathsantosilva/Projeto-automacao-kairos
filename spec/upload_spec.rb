@@ -2,8 +2,8 @@ describe 'upload de arquivos', :upload do
 
     before(:each) do
         visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
-        fill_in 'LogOnModel_UserName', with: 'mat_santos21@hotmail.com'
-        fill_in 'LogOnModel_Password', with: 'teste'
+        fill_in 'LogOnModel_UserName', with: login
+        fill_in 'LogOnModel_Password', with: senha
         click_button 'btnFormLogin'
         @arquivo = Dir.pwd + '/spec/fixtures/arquivo.txt'
         @imagem = Dir.pwd + '/spec/fixtures/imagem.jpg'

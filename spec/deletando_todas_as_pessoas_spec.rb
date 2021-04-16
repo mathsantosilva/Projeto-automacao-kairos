@@ -4,7 +4,7 @@ describe 'Deletando pessoas', :deletar do
         fill_in 'LogOnModel_UserName', with: @login
         fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
-        visit 'https://www.dimepkairos.com.br/Dimep'
+        visit '/Dimep'
         sleep 5
         # Fechar Popup chato
         # find('div[class="close-button-modular"]').click
