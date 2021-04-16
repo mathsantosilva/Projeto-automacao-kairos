@@ -1,11 +1,11 @@
 describe 'Botões de radio', :radio do
     before(:each) do
-        visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
-        fill_in 'LogOnModel_UserName', with: login
-        fill_in 'LogOnModel_Password', with: senha
+        visit '/'
+        fill_in 'LogOnModel_UserName', with: @login
+        fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
         sleep 10
-        visit 'https://www.dimepkairos.com.br/Dimep/ConfiguracaoRelogio/Create'
+        visit '/Dimep/ConfiguracaoRelogio/Create'
     end
 
     it 'Cadastro relogio MiniPrint', :cadastro_miniprint do

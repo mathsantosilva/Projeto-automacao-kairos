@@ -17,8 +17,8 @@ RSpec.configure do |config|
     config.include Capybara::DSL
     config.before(:example) do
       page.current_window.resize_to(1280, 800)
-      @login = 'teste1245@dimep.com.br'
-      @senha = '1'
+      @login = 'mat_santos21@hotmail.com'
+      @senha = 'teste'
   end
     config.after(:example) do |e|
       nome = e.description.gsub(/[^A-Za-z0-9]/, '').tr(' ','_')

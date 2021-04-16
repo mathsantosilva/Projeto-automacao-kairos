@@ -1,6 +1,6 @@
 describe 'Deletando pessoas', :deletar do
     before(:each) do
-        visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
+        visit '/'
         fill_in 'LogOnModel_UserName', with: @login
         fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
@@ -22,7 +22,7 @@ describe 'Deletando pessoas', :deletar do
         expect(mensagem).to have_content 'Pessoas excluídas com sucesso.'
     end
 
-    it 'Todos', :deletar_primeira_pagina do
+    it 'Primeira pagina', :deletar_primeira_pagina do
         find('input[id="SearchButtonPessoa"]').click
         card = find('img[id="TogleIconSelectionType"]')
         card.hover

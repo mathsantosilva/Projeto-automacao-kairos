@@ -1,17 +1,17 @@
 describe 'upload de arquivos', :upload do
 
     before(:each) do
-        visit 'https://www.dimepkairos.com.br/Dimep/Account/LogOn?ReturnUrl=%2F'
-        fill_in 'LogOnModel_UserName', with: login
-        fill_in 'LogOnModel_Password', with: senha
+        visit '/'
+        fill_in 'LogOnModel_UserName', with: @login
+        fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
         @arquivo = Dir.pwd + '/spec/fixtures/arquivo.txt'
         @imagem = Dir.pwd + '/spec/fixtures/imagem.jpg'
         @atestado = Dir.pwd + '/spec/fixtures/atestado.jpg'
+        visit '/Dimep/Pessoas/UserProfilePessoas/2133'
     end
 
     it 'foto do funcionario', :foto_funcionario do
-        visit '/Dimep/Pessoas/UserProfilePessoas/2133'
         find('input[id="editPessoa"][value="Alterar"]').click
         alterar_foto = find('span[class="buttonFile"]')
         expect(alterar_foto).to have_content 'Alterar Foto'
@@ -23,7 +23,6 @@ describe 'upload de arquivos', :upload do
     end
 
     it 'documento de atestado', :documento_atestado do
-        visit '/Dimep/Pessoas/UserProfilePessoas/2133'
         find('div[id="UserProfilePedidosJustificativas"]').click
         find('span[id="TabPedidoHeader2"]').click
 
