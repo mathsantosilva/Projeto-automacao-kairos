@@ -10,13 +10,32 @@ describe 'Movendo relogio monitorado', :drop do
         
 end
 
-it 'Relogio', :drop_relogio do
+    it 'Relogio', :drop_relogio do
+        #Primeira posição
+        coluna =  find('div[id="column_0"]')
+        relogio = find('div[id="widget_1"]')
+        relogio.drag_to coluna
 
-    coluna =  find('div[id="column_3"]')
-    relogio = find('div[id="widget_1"]')
-    relogio.drag_to coluna
-     
- end
+        #Segunda posição
+        coluna =  find('div[id="column_1"]')
+        relogio = find('div[id="widget_1"]')
+        relogio.drag_to coluna
+
+        #Terceira Posição
+        coluna =  find('div[id="column_2"]')
+        relogio = find('div[id="widget_1"]')
+        relogio.drag_to coluna
+
+        #Quarta posição
+        coluna =  find('div[id="column_3"]')
+        relogio = find('div[id="widget_1"]')
+        relogio.drag_to coluna
+        
+    end
+
+    after(:each) do
+        sleep 5
+    end
 
 
 end
