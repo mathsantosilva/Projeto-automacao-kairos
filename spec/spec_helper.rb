@@ -28,6 +28,6 @@ end
 
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome #_headless
-  config.default_max_wait_time = 100
+  config.default_max_wait_time = 85
   config.app_host = 'https://www.dimepkairos.com.br'
 end
