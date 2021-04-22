@@ -5,7 +5,9 @@ describe 'acessando empresas', :Acessando do
         fill_in 'LogOnModel_UserName', with: @login
         fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
-        visit '/Dimep'
+        card = find('span[id="toogleModulos"]')
+        card.hover
+        find('img[class="pessoasIcon icons"]').click
     end
 
     it 'acessando a sub empresa ', :sub_empresa do
