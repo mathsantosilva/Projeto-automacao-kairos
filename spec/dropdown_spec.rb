@@ -6,7 +6,15 @@ describe 'Caixa de seleção', :dropdown do
         fill_in 'LogOnModel_UserName', with: @login
         fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
-        visit '/Dimep/Empresas/Edit/497121'
+        # Navegar até a tela de Definições - Empresas
+        selecionar = find('div[id="toggleUserDefinitions"]')
+        selecionar.hover
+        find('div[class="pointer DropDownHeaderElement"]', text: 'Empresa').click
+        find('div[id="MenuEmpresas"]').click
+        selecionar = find('table tbody tr', text: 'Web Café - Alterar a Razão Social - Alteração de nome')
+        scroll_to(selecionar)
+        selecionar.hover
+        find('span[class="spanButtonText"]').click
     end
 
     it 'Selecionando campo de ramo de atividade' do
