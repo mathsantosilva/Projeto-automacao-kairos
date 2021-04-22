@@ -4,7 +4,9 @@ describe 'Cadastro de formato de arquivo', :formatos do
         fill_in 'LogOnModel_UserName', with: @login
         fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
-        visit '/Dimep/FormatosArquivoColetaApontamentos'
+        card = find('label[class="labelDefinitions pointer"]')
+        card.hover
+        find('div[class="pointer DropDownHeaderElement"]', text: 'Importação').click
         sleep 5
         # Fechar Popup chato
         # find('div[class="close-button-modular"]').click

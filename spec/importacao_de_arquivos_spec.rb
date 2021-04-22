@@ -9,6 +9,7 @@ describe 'Importando Arquivos', :importar do
         # Fechar Popup chato
         # find('div[class="close-button-modular"]').click
 
+        # Variaveis com os arquivos de importação
         @arquivo_pessoas_inclusao = Dir.pwd + '/spec/fixtures/importacoes/pessoas/inclusao-pessoas/inclusao-pessoas.txt'
         @arquivo_pessoas_desligamento = Dir.pwd + '/spec/fixtures/importacoes/pessoas/desligamento-pessoas/desligamento-pessoas.txt'
         @arquivo_pessoas_ferias = Dir.pwd + '/spec/fixtures/importacoes/pessoas/ferias/ferias.txt'

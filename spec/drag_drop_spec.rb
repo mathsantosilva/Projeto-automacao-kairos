@@ -4,9 +4,9 @@ describe 'Movendo relogio monitorado', :drop do
         fill_in 'LogOnModel_UserName', with: @login
         fill_in 'LogOnModel_Password', with: @senha
         click_button 'btnFormLogin'
-        sleep 3
-        visit '/Dimep/MonitoracaoEquipamentos'
-        sleep 3
+        card = find('span[id="toogleModulos"]')
+        card.hover
+        find('img[class="monitoracaoEquipamentosIcon icons"]').click
         
 end
 
